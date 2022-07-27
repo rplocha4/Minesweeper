@@ -4,7 +4,7 @@ from random import randint
 class Saper:
     def __init__(self, board_size):
         self.board_size = board_size
-        self.board = [[0 for x in range(board_size)] for y in range(board_size)]
+        self.board = [[0 for x in range(self.board_size)] for y in range(self.board_size)]
 
     def get_board_size(self):
         return self.board_size
@@ -51,6 +51,9 @@ class Saper:
                 n_bombs += 1
 
         return n_bombs
+
+    def clear_board(self):
+        self.board = [[0 for x in range(self.board_size)] for y in range(self.board_size)]
 
 
 if __name__ == "__main__":
